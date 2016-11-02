@@ -1,0 +1,44 @@
+.emptyShop-img {
+    background: url(http://odji6lyqv.bkt.clouddn.com/original-img.png) center center no-repeat!important;
+    background-size: 93px 77px!important;
+}
+.emptyShop-sign {
+    background-size: 100px 100px;
+    height: 110px;
+    margin-top: 33px;
+}
+.emptyShop-text {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    line-height: 18px;
+    min-height: 50px;
+}
+.emptyShop-wrapper {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.emptyShop-large {
+    font-size: 14px;
+    padding: 12px 40px;
+}
+.emptyShop-wrapper .emptyShop-large {
+    margin: 0 10px;
+}
+.emptyShop-darkred {
+    color: #fff;
+    display: inline-block;
+    background: #c40564;
+    border-radius: 3px;
+    padding: 4px 12px;
+    line-height: 1.2em;
+}
+.emptyShop-gray {
+    color: #fff;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 3px;
+    padding: 4px 12px;
+    line-height: 1.2em;
+}

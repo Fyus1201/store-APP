@@ -1,0 +1,82 @@
+{
+  "data": {
+    "groupList":[
+      {
+        "title":"火腿",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-0.png",
+        "subtitle":"正宗金华火腿",
+        "text":"用巨优惠，立减返现",
+        "color":"#ff9821",
+        "orderNum":"6723412",
+        "price":57.20
+      },
+      {
+        "title":"鱼干",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-1.png",
+        "subtitle":"香酥小黄鱼",
+        "text":"下饭零食小吃，香辣麻辣可选",
+        "color":"#ff0f32",
+        "orderNum":"4563543",
+        "price":24.50
+      },
+      {
+        "title":"苹果", 
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-2.png",
+        "subtitle":"新鲜水果",
+        "text":"坏苹果包赔，12粒装 新鲜水果",
+        "color":"#ff1a2b",
+        "orderNum":"5372456",
+        "price":15.50
+      },
+      {
+        "title":"鲍鱼",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-3.png",
+        "subtitle":"新鲜鲍鱼",
+        "text":"顺丰保鲜，一哥鲍鱼",
+        "color":"#2a75ff",
+        "orderNum":"2452421",
+        "price":31.90
+      },
+      {
+        "title":"鲜虾",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-4.png",
+        "subtitle":"大虾鲜活",
+        "text":"用巨优惠，立减返现",
+        "color":"#2a75ff",
+        "orderNum":"1112618",
+        "price":41.10
+      },
+      {
+        "title":"牛排",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-5.png",
+        "subtitle":"牛排团购",
+        "text":"送刀叉黄油酱爆",
+        "color":"#ff1a2b",
+        "orderNum":"5242120",
+        "price":17.20
+      },
+      {
+        "title":"水果",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-6.png",
+        "subtitle":"新鲜健康",
+        "text":"用巨优惠，立减返现",
+        "color":"#ffb618",
+        "orderNum":"8532241",
+        "price":22.50
+      },
+      {
+        "title":"粮油",
+        "smallpic":"http://odji6lyqv.bkt.clouddn.com/h5Img-7.png",
+        "subtitle":"健康食用油",
+        "text":"用巨优惠，立减返现",
+        "color":"#2a75ff",
+        "orderNum":"1432201",
+        "price":12.70
+      }
+    ]
+  },
+  "exceptionMessage": "",
+  "isSuccess": true,
+  "message": "",
+  "success": true
+}

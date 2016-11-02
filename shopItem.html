@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>泱农易购，农贸商城</title>
+    <link rel="stylesheet" href="./css/item.css">
+    <link rel="stylesheet" href="./css/light7.css">
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+<div class="page">
+    <!-- nav-->
+    <header class="bar bar-nav ">
+        <a href="./index.html" class="button pull-left button-nav button-link back" style= "color: #d50578!important;" >
+            <span class="icon icon-left color-nong"></span>
+            返回
+        </a>
+        <h1 class="title item-title">泱农易购，农贸商城</h1>
+        <a href="#" class="pull-right button-nav button-link" >
+            <span class="icon icon-search color-nong"></span>
+        </a>
+    </header>
+
+    <div class="content" >
+        <div class="card">
+            <div valign="bottom" class="card-header color-white no-border no-padding">
+                <img class="itemImg item-Classimg" src="http://odji6lyqv.bkt.clouddn.com/original-img.png" alt="">
+            </div>
+            <div class="card-content">
+                <div class="card-content-inner smallTitle item-smallTitle">
+                    <p>泱农易购，农贸商城</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="item-text">泱农易购，农贸商城</p>
+                <p class="price item-rmb">¥99.99</p>
+            </div>
+            <div class="row">
+                <div class="col-50"><a href="#" class="button button-big button-fill button-danger ">收藏</a></div>
+                <div class="col-50"><a href="#" class="button button-big button-fill   button-success">购买</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- popup, panel 等放在这里 -->
+<div class="panel-overlay">
+
+</div>
+
+<script>
+    $.config = {
+        autoInit: true
+    }
+</script>
+
+<script src=./js/light7.js></script>
+<script src=./js/juicer-min.js></script>
+<script>
+(function(){
+
+    var initItem = function (orderId) {
+        $.ajax({
+            type: "GET",
+            url: "./data/groupList.json",
+            data:"fyus",
+            async: true,
+            dataType: "json",
+            timeout: 300,
+
+            success: function(data){
+
+                var json = JSON.parse(JSON.stringify(data.data));
+
+                for(var n in json.groupList){
+                    if(orderId === json.groupList[n].orderNum)
+                        initShopItem(json.groupList[n])
+                }
+            },
+            error: function(xhr, type){
+                alert("读取失败");
+            }
+        });
+    };
+
+    var itemIDstring = function (host,id,n){
+        var currn = host.indexOf(id);
+        var orderId = host.slice(currn+id.length,currn+id.length+n);
+        return orderId;
+    };
+
+    var initShopItem = function(array){
+        $(".item-title").text(array.title);
+//        $(".item-Classimg").src = "http://odji6lyqv.bkt.clouddn.com/h5Img-6.png";
+        $(".item-Classimg").attr("src",function(){
+                    return array.smallpic}
+        );
+        $(".item-smallTitle").text(array.subtitle);
+        $(".item-text").text(array.text);
+        $(".item-rmb").text('¥'+array.price);
+    };
+    var host = window.location.search;
+    initItem(itemIDstring(host,"orderId=",7));
+})()
+</script>
+</body>
+</html>

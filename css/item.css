@@ -1,0 +1,25 @@
+.itemImg {
+    display: block;
+    width: 100%;
+    max-width: 12rem;
+   margin: 10px auto;
+}
+.smallTitle{
+    text-align: center;
+    font-size: 1rem;
+}
+.item-text{
+    color: #ff6100;
+}
+/*价格*/
+.price{
+    font-size: 0.75rem;
+    color: #ff0500;
+    line-height: 1rem;
+}
+.price::first-letter {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 8px;
+    float: left	;
+}

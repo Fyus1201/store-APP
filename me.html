@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>泱农易购，农贸商城</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/light7.css">
+    <script src="./js/zepto.min.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <!-- nav-->
+    <header class="bar bar-nav ">
+        <a href="#" class="open-panel pull-left button-nav button-link" >
+            <span class="icon icon-menu color-nong"></span>
+        </a>
+        <!--<a onclick="javascript:history.go(-1)" class=" pull-left button-nav button-link"  style= "cursor: pointer; ">-->
+            <!--<span class="icon icon-left color-danger"></span>-->
+        <!--</a>-->
+        <h1 class="title">我的</h1>
+        <a href="#" class="pull-right button-nav button-link" >
+            <span class="icon icon-search color-nong"></span>
+        </a>
+    </header>
+    <!-- Toolbar-->
+    <nav class="bar bar-tab">
+        <a class="tab-item external" href="./index.html">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item external" href="#">
+            <span class="icon icon-app"></span>
+            <span class="tab-label">电脑版</span>
+        </a>
+        <a class="tab-item external " href="./shopCar.html">
+            <span class="icon icon-cart"></span>
+            <span class="tab-label">购物车</span>
+            <span class="badge">0</span>
+        </a>
+        <a class="tab-item external active" href="#">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">我的</span>
+        </a>
+    </nav>
+    <div class="content">
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">姓名</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="你的名字">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-email"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">邮箱</div>
+                            <div class="item-input">
+                                <input type="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-password"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">密码</div>
+                            <div class="item-input">
+                                <input type="password" placeholder="你的密码" class="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">性别</div>
+                            <div class="item-input">
+                                <select>
+                                    <option>男</option>
+                                    <option>女</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Date -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">生日</div>
+                            <div class="item-input">
+                                <input type="date" placeholder="Birth day" value="2014-04-30" data-toggle='date' />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Switch (Checkbox) -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">公开</div>
+                            <div class="item-input">
+                                <label class="label-switch">
+                                    <input type="checkbox">
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="align-top">
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">简介</div>
+                            <div class="item-input">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <div class="row">
+                <div class="col-100"><a href="#" class="button button-big button-fill button-success ">注册</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- popup, panel 等放在这里 -->
+<div class="panel-overlay">
+
+</div>
+<!--侧边栏-->
+<div class="panel panel-left panel-reveal">
+    <div class="content-l">
+        <p><a href="#" class="close-panel color-white">我的</a></p>
+        <p><a href="#" class="close-panel color-white">购物车</a></p>
+        <p><a href="#" class="close-panel color-white">收藏</a></p>
+        <p><a href="#" class="close-panel color-white">分享</a></p>
+        <p><a href="#" class="close-panel color-white ">设置</a></p>
+        <p><a href="#" class="close-panel color-white">返回</a></p>
+    </div>
+</div>
+
+<script>
+    $.config = {
+        autoInit: true
+    }
+</script>
+
+<script src=./js/light7.js></script>
+<script src=./js/mejs.js></script>
+
+</body>
+</html>
