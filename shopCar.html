@@ -49,22 +49,16 @@
     </nav>
 
     <div class="content">
-            <div class="emptyShop">
-                <div class="emptyShop-sign emptyShop-img"></div>
-                <div class="emptyShop-text">
-                    购物车空空如也，快去购物吧
-                    <br> 或者登录查看您的购物车
-                </div>
-                <div class="emptyShop-wrapper">
-                    <a href="index.html" class="external emptyShop-darkred emptyShop-large">去逛逛</a>
-                </div>
-            </div>
+        <div class="list-block media-list">
+            <ul class="maxW" style="background: rgba(255, 255, 255, 0)">
+
+            </ul>
+        </div>
     </div>
 </div>
 
 <!-- popup, panel 等放在这里 -->
 <div class="panel-overlay">
-
 </div>
 <!--侧边栏-->
 <div class="panel panel-left panel-reveal">
@@ -83,8 +77,65 @@
         autoInit: true
     }
 </script>
+<script type="text/template" id="shopCar_list">
+
+    {@if (shopCarList.length>0)}
+    {@each shopCarList as it}
+    <li style="background: white">
+        <label class="label-checkbox item-content">
+            <input type="checkbox" name="shopCarlist">
+            <div class="item-media">
+                <i class="icon icon-form-checkbox"></i>
+            </div>
+            <a href="#"  class="shopCarItem-content external">
+                <div class="item-media">
+                    <img id="itemIDimg" class="itemClassimg" src="${it.smallpic}" onerror="this.onerror=null; this.src='http://odji6lyqv.bkt.clouddn.com/h5Img-0.png'" style="width: 4rem;">
+                </div>
+                <div class="item-inner">
+                    <div class="item-title-row">
+                        <div class="item-title color-default">${it.title}</div>
+                        <div class="item-after" style="color:#ff871b;margin-right: 0.4rem;">¥${it.price}</div>
+                    </div>
+                    <div class="groupSubtitle color-gray">${it.subtitle}</div>
+                    <div class="groupBuyNum">
+                        <span href="#" class="delButton">-</span>
+                        <input class="groupBuyNum-sun" value="${it.number}">
+                        <span href="#" class="addButton">+</span>
+                    </div>
+                    <div class="groupText color-warning" >${it.text}</div>
+                    <div class="groupBuy" >立即购买</div>
+                </div>
+            </a>
+        </label>
+    </li>
+    {@/each}
+    <div class="content-block" style="margin: 0.55rem auto!important;">
+        <div class="shopCarSun">总价格:<span class="shopCarSun-num">¥0.00</span></div>
+        <div class="row">
+            <div class="col-50"><a href="#" class="button button-big button-fill button-danger del">删除</a></div>
+            <div class="col-50"><a href="#" class="button button-big button-fill button-success suc">购买</a></div>
+        </div>
+    </div>
+    {@else}
+    <div class="emptyShop">
+        <div class="emptyShop-sign emptyShop-img"></div>
+        <div class="emptyShop-text">
+            购物车空空如也，快去购物吧
+            <br> 或者登录查看您的购物车
+        </div>
+        <div class="emptyShop-wrapper">
+            <a href="index.html" class="external emptyShop-darkred emptyShop-large">去逛逛</a>
+        </div>
+    </div>
+    {@/if}
+
+</script>
+
 
 <script src=./js/light7.js></script>
+<script src=./js/juicer-min.js></script>
+<script src="./js/stroe/app.js"></script>
+<script src="js/stroe/shopCar.js"></script>
 
 </body>
 </html>

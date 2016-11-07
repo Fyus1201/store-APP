@@ -159,19 +159,19 @@
                                 <span class="qianggo-img">
                                     <img src="http://odji6lyqv.bkt.clouddn.com/001.png" >
                                 </span>
-                                  <p class="item-name">冠锦 无核西梅干 255g</p>
+                                  <p class="item-name">冠锦西梅干 255g</p>
                             </a>
                         </li>
                         <li class="qianggo-itemli">
                             <a class="qianggo-itema" href="#" title="可康 芒果味果冻420g*5 ￥52">
                                 <span class="qianggo-img"><img src="http://odji6lyqv.bkt.clouddn.com/003.png"></span>
-                                <p class="item-name">冠锦 无核西梅干 255g</p>
+                                <p class="item-name">冠锦 无核西梅干</p>
                             </a>
                         </li>
                         <li class="qianggo-itemli">
                             <a class="qianggo-itema" href="#" title="英伯伦 富士苹果 25g ￥1.5">
                                 <span class="qianggo-img"><img src="http://odji6lyqv.bkt.clouddn.com/002.png"></span>
-                                <p class="item-name">冠锦 无核西梅干 255g</p>
+                                <p class="item-name">无核西梅干 255g</p>
                             </a>
                         </li>
                     </ul>
@@ -213,7 +213,7 @@
         <li>
             <a href="shopItem.html?pageName=shopItem&orderId=${it.orderNum}" class="item-link item-content external">
             <div class="item-media">
-                <img id="itemIDimg" class="itemClassimg" src="${it.smallpic}" onerror="this.onerror=null; this.src='http://odji6lyqv.bkt.clouddn.com/h5Img-0.png'" style="width: 4rem;">
+                <img id="itemIDimg${it.orderNum}" class="itemClassimg" src="${it.smallpic}" onerror="this.onerror=null; this.src='http://odji6lyqv.bkt.clouddn.com/h5Img-0.png'" style="width: 4rem;">
             </div>
             <div class="item-inner">
                 <div class="item-title-row">
@@ -227,7 +227,7 @@
             </a>
         </li>
         {@/each}
-        {@else}
+    {@else}
         没有任何数据...
     {@/if}
 </script>
@@ -245,8 +245,8 @@
 <script src=./js/light7.js></script>
 <script src=./js/juicer-min.js></script>
 <!--<script src=./js/vue.js></script>-->
-<!--<script src=./js/app.js></script>-->
-<script src=./js/main.js></script>
+<script src=./js/stroe/app.js></script>
+<script src=js/stroe/main.js></script>
 
 </body>
 </html>

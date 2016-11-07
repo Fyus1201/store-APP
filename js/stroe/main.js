@@ -4,11 +4,17 @@
 
 
 (function(){
+
+
     //加载
 //$.showPreloader("加载中");
 //setTimeout(function () {
 //    $.hidePreloader();
 //}, 2000);
+
+    //购物车内容
+    var appItem=new AppItem();
+    $(".badge").text(appItem.number);
 
 //下拉刷新
     $(document).on("refresh", ".pull-to-refresh-content",function(e) {
@@ -27,6 +33,7 @@
     function addItems(number, lastIndex) {
         for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
         }
+        app.ajax();
         $.ajax({
             type: "GET",
             url: "./data/groupList.json",
@@ -46,8 +53,8 @@
                 };
                 juicer.register('item_data', itemData); //注册自定义函数
 
-                var tpl0 = document.getElementById("group_list").innerHTML;
-                $(".maxW").append(juicer(tpl0, json));
+                var tpl = document.getElementById("group_list").innerHTML;
+                $(".maxW").append(juicer(tpl, json));
             },
             error: function(xhr, type){
                 alert("读取失败");
@@ -171,26 +178,20 @@
         }
     );
 //购买事件
+
     $(document).on("click", ".groupBuy",function(e) {
         e.preventDefault();
         e.stopPropagation();
-
-        var sun = parseInt($(".badge").text());
-        $(".badge").text(sun+1);
+        //var sun = parseInt($(".badge").text());
         $(this).parent().siblings(".item-media").find("img").addParabola(".icon-cart");
-        var product=JSON.parse($(this).data("obj"));
-        console.log(product);
-    });
-//加入购物车
-//    $(document).on("click",".product-shopope-box",function(e){
-        //e.preventDefault();
-        //e.stopPropagation();
-        //var product=JSON.parse($(this).data("obj"));
-        //var carProduct = new CarProduct(product.serial, product.name, product.price, product.spec, product.brand, product.smallpic, product.productType, 1);
-        //shopCar.add(carProduct);
-        //addProduct(e,product);
 
-    //});
+        var product=JSON.parse($(this).data("obj"));
+        var carItem = new CarItem(product.orderNum,product.title,product.subtitle,product.text,product.smallpic,product.price,1);
+        appItem.add(carItem);
+
+        $(".badge").text(appItem.number);
+
+    });
 
     /** 添加抛物线动画 */
     $.fn.addParabola = function(targetID,options){
@@ -336,11 +337,9 @@
                 thatImg = $(this).clone().prop("class",thatImgClassName);
                 thatImg.addClass("itemClassimgMove");
                 position();
-
             }else{
                 console.log("请使用img");
             }
-
         });
     }
-})()
+})();

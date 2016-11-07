@@ -1302,7 +1302,7 @@ i.icon.icon-plus {
 
 }
 .list-block-max {
-  margin: 1.25rem 0;
+  margin: 0.75rem 0;
   margin-bottom: 0;
   padding-left: 1rem;
   font-size: .85rem;
@@ -2302,7 +2302,7 @@ label.label-checkbox input[type="radio"] {
 }
 label.label-checkbox input[type="checkbox"]:checked + .item-media i.icon-form-checkbox,
 label.label-checkbox input[type="radio"]:checked + .item-media i.icon-form-checkbox {
-  background-color: #0894ec;
+  background-color: #ec1500;
   border: none;
 }
 label.label-checkbox input[type="checkbox"]:checked + .item-media i.icon-form-checkbox:after,
