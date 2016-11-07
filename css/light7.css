@@ -1641,11 +1641,11 @@ i.icon.icon-plus {
 }
 .list-block .item-link .item-inner {
   padding-right: 1.5rem;
-  background-image: url("../img/i-list-chevron-right.png");
+  /*background-image: url("../img/i-list-chevron-right.png");*/
   background-repeat: no-repeat;
   background-position: 97% center;
-  background-position: -webkit-calc(100% - .5rem) center;
-  background-position:         calc(100% - .5rem) center;
+  background-position: -webkit-calc(100% - .2rem) center;
+  background-position:         calc(100% - .2rem) center;
   background-size: .7rem;
 }
 html:not(.watch-active-state) .list-block .item-link:active,
